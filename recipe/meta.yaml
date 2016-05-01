@@ -1,4 +1,4 @@
-{% set version = "1.0.0" %}
+{% set version = "1.2.1" %}
 
 package:
     name: widgetsnbextension
@@ -7,7 +7,7 @@ package:
 source:
     fn: widgetsnbextension-{{ version }}.tar.gz
     url: https://pypi.io/packages/source/w/widgetsnbextension/widgetsnbextension-{{ version }}.tar.gz
-    md5: 1aca2794720a08a5eb391de45cdf6412
+    md5: cdce55e60597d51a8db9f7e08d1f70c3
 
 build:
     number: 0
@@ -36,3 +36,4 @@ extra:
     - jakirkham
     - minrk
     - pelson
+    - SylvainCorlay
