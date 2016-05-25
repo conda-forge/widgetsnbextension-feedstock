@@ -1,4 +1,4 @@
-{% set version = "1.2.2" %}
+{% set version = "1.2.3" %}
 
 package:
     name: widgetsnbextension
@@ -7,10 +7,10 @@ package:
 source:
     fn: widgetsnbextension-{{ version }}.tar.gz
     url: https://pypi.io/packages/source/w/widgetsnbextension/widgetsnbextension-{{ version }}.tar.gz
-    md5: 80c325aa4db1cf3bf5c4287898ebab98
+    md5: 96b4adc12e70de9c54b5eb103e1167c8
 
 build:
-    number: 1
+    number: 0
     script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
