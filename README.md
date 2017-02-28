@@ -11,6 +11,18 @@ Summary: IPython HTML widgets for Jupyter
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/widgetsnbextension-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/widgetsnbextension-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/widgetsnbextension-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/widgetsnbextension-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/widgetsnbextension-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/widgetsnbextension-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/widgetsnbextension/badges/version.svg)](https://anaconda.org/conda-forge/widgetsnbextension)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/widgetsnbextension/badges/downloads.svg)](https://anaconda.org/conda-forge/widgetsnbextension)
+
 Installing widgetsnbextension
 =============================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `widgetsnbextension` available on 
 ```
 conda search widgetsnbextension --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/widgetsnbextension-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/widgetsnbextension-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/widgetsnbextension-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/widgetsnbextension-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/widgetsnbextension-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/widgetsnbextension-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/widgetsnbextension/badges/version.svg)](https://anaconda.org/conda-forge/widgetsnbextension)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/widgetsnbextension/badges/downloads.svg)](https://anaconda.org/conda-forge/widgetsnbextension)
 
 
 Updating widgetsnbextension-feedstock
