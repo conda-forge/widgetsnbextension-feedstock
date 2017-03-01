@@ -1,4 +1,5 @@
-{% set version = "1.2.6" %}
+{% set version = "2.0.0" %}
+{% set sha256 = "566582a84642d0c0f78b756a954450a38a8743eeb8dad04b7cab3ca66f455e6f" %}
 
 package:
     name: widgetsnbextension
@@ -7,20 +8,23 @@ package:
 source:
     fn: widgetsnbextension-{{ version }}.tar.gz
     url: https://pypi.io/packages/source/w/widgetsnbextension/widgetsnbextension-{{ version }}.tar.gz
-    md5: 0aa4e152c9ba2d704389dc2453f448c7
+    sha256: {{ sha256 }}
 
 build:
-    number: 3
+    number: 0
     script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
     build:
         - python
         - setuptools
-        - notebook >=4.2.0
+        - notebook >=4.4.1
     run:
         - python
-        - notebook >=4.2.0
+        - notebook >=4.4.1
+        - traitlets >=4.3.1
+        - nbformat >=4.2.0
+        - ipykernel >=4.5.1
 
 test:
     imports:
@@ -29,10 +33,11 @@ test:
 about:
     home: http://ipython.org
     license: BSD 3-clause
-    summary: IPython HTML widgets for Jupyter
+    summary: Interactive Widgets for Jupyter
 
 extra:
   recipe-maintainers:
+    - jasongrout
     - jakirkham
     - minrk
     - pelson
