@@ -14,22 +14,39 @@ env:
     - CONDA_PY=36
   global:
     # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
-    - secure: "pzJIaIJAmBFROFDFoxb0Lvf2BcmZBEsjD002ppIm6PsEGGxH1Ist3BW3MFb8NTMES40Z+Ij1Mqg+ML0uszgi4ZXYGQCaHxMYPnWA/ilzjvrXaa8X5AEKwq5Q56DjDbe7o5w2fXQE95WVhDz65FNQIlBUCIDS+IQmWPpfCbHMDbUdgtQaUWoHzgtjvbO5U7U50wVL84pj1dBUcl3AT+rmMsnsXZdG4CmrOipI3qQeyL9/4K6cafk6OeJZsLZf0mssn1D04S1HCAfZphsmuBFj+9Ay/BglcGsoTYXQEBIbpR+F89te5i8I+VRyjTjqwxa80KwyGfPyqgjMabOIkJ7E5S2UypuEFtivTB3lcYTDG8XGQK74pVnDFBofjzPuSqB1sfjiLIY8jS1kxvqxyqnut++473f5/nz0Cxaql48euR/dz6CgEi83qLP6iqd3rh6HlFXFPqrhngiPfE9CAKe5sPPf9gbe9q43kNZa0Hat/cr4pd9I5yJQO8LT7aO8AriNv6fbDH3XngJ0J1OArrzKMoSoDLw9B3OWMO3KQFpETXF+1nBheT/DSiTxr02iCE5lnnBVM3PEUuNg4eazGPJyDGhfGp9xo0BV6fZI7GjUwF17PYj3tgbfdKWlWoA1jSyRFAOez614pyDJ+lfELqODW7JPUWVgw9Jcy3o6XcksUQY="
+    - secure: "pvfc7GUTcpfD0mIUdi99MMiTcx/Km4KpLCoceKcjSZgjhGp9d4O6D9RcWNPL3Gobezay1kIHUU9DYn3KwxU3N2FK70ZcPnenaFCxJJ8TCREkwUC83kYz5YSoiFpYIv7Oenx4eTKxsRKlz8qi/lUS1Q+DrYZYMgZ9MStXawIvfpiu9swRcolu6s0/vhGgWfIym9ssE76bnLMWSsS07nlnYz8fwVm1/x+DSoxzrAoZqLeOKdmGE0efPCBJ/ECfyKLeNPqwftNSwn/y9WhJQti38P5WGymWIDBkJn+neDgkC37qf/3m2O8pVm2TEnR1X29DFu4LtcmvLZLGhj1xF1nNlPGDfuu84q22AQ01U6DBexotwqhNCMT4fkiEQM7MFOKgAAYu66z3C1IFKdZjDnVCFp6cjDMi9odARPGEyoN9vspSuikPmGilgUwfZ+8l4jVzsX8xcYgP+A4CBi2AMY7/Tv3tlfKYTyGBt7FpUHzUFbqfJyxt0mr+Nti0Cj2gloY5xxjqjy20mqtRe0h0UDzpB0wrkIxe2HB95ihdktM9L4uZiGC9O3vjLwIkqkllS55OBy4PRPBgN7+txiYiIWzGr0z4lWdxQVuP6ooy6uoROidjohgJldSBf/VN2lhLzfqYcL1zw/mFewJPcfykR+BtpfjyYaWVikc/hvqbRDMoZgM="
 
 
 before_install:
+    # Fast finish the PR.
+    - |
+      (curl https://raw.githubusercontent.com/conda-forge/conda-forge-build-setup-feedstock/master/recipe/ff_ci_pr_build.py | \
+          python - -v --ci "travis" "${TRAVIS_REPO_SLUG}" "${TRAVIS_BUILD_NUMBER}" "${TRAVIS_PULL_REQUEST}") || exit 1
+
     # Remove homebrew.
-    - brew remove --force --ignore-dependencies $(brew list)
-    - brew cleanup -s
-    - rm -rf $(brew --cache)
+    - |
+      echo ""
+      echo "Removing homebrew from Travis CI to avoid conflicts."
+      curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall > ~/uninstall_homebrew
+      chmod +x ~/uninstall_homebrew
+      ~/uninstall_homebrew -fq
+      rm ~/uninstall_homebrew
+
 
 install:
+    # Install Miniconda.
     - |
+      echo ""
+      echo "Installing a fresh version of Miniconda."
       MINICONDA_URL="https://repo.continuum.io/miniconda"
       MINICONDA_FILE="Miniconda3-latest-MacOSX-x86_64.sh"
       curl -L -O "${MINICONDA_URL}/${MINICONDA_FILE}"
       bash $MINICONDA_FILE -b
 
+    # Configure conda.
+    - |
+      echo ""
+      echo "Configuring conda."
       source /Users/travis/miniconda3/bin/activate root
       conda config --remove channels defaults
       conda config --add channels defaults

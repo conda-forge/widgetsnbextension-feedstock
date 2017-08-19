@@ -7,7 +7,7 @@ Package license: BSD 3-clause
 
 Feedstock license: BSD 3-Clause
 
-Summary: IPython HTML widgets for Jupyter
+Summary: Interactive Widgets for Jupyter
 
 
 
