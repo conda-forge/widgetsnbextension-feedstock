@@ -1,5 +1,5 @@
-{% set version = "3.0.6" %}
-{% set sha256 = "3fbedb4ae0883f48af2397c65a8f9fbf8ed868f1808db70f8aa72f25d391fa9b" %}
+{% set version = "3.0.8" %}
+{% set sha256 = "a57e29e733b989e68fdd0f3d6927a3691763b39792591d573b95a89a5a12ec15" %}
 
 package:
   name: widgetsnbextension
@@ -11,12 +11,12 @@ source:
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
     - notebook >=4.4.1
   run:
     - python
