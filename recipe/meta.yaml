@@ -1,5 +1,5 @@
 {% set version = "3.1.0" %}
-{% set sha256 = "3e2be7dea4f97c9a4df71ef065cad9f2e420dd901127bf7cb690fb56d2b34ea3" %}
+{% set sha256 = "67fc28c3b9fede955d69bccbd92784e3f0c6d0dee3a71532cd3367c257feb178" %}
 
 package:
   name: widgetsnbextension
