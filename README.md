@@ -14,14 +14,15 @@ Summary: Interactive Widgets for Jupyter
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/widgetsnbextension-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/widgetsnbextension-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/widgetsnbextension-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/widgetsnbextension-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/widgetsnbextension-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/widgetsnbextension-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/widgetsnbextension-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/widgetsnbextension-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/widgetsnbextension/badges/version.svg)](https://anaconda.org/conda-forge/widgetsnbextension)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/widgetsnbextension/badges/downloads.svg)](https://anaconda.org/conda-forge/widgetsnbextension)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-widgetsnbextension-green.svg)](https://anaconda.org/conda-forge/widgetsnbextension) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/widgetsnbextension.svg)](https://anaconda.org/conda-forge/widgetsnbextension) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/widgetsnbextension.svg)](https://anaconda.org/conda-forge/widgetsnbextension) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/widgetsnbextension.svg)](https://anaconda.org/conda-forge/widgetsnbextension) |
 
 Installing widgetsnbextension
 =============================
