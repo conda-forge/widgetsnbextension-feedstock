@@ -9,6 +9,7 @@ Feedstock license: BSD 3-Clause
 
 Summary: Interactive Widgets for Jupyter
 
+Interactive HTML widgets for Jupyter notebooks.
 
 
 Current build status
