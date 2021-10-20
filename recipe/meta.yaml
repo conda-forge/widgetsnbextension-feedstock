@@ -1,5 +1,5 @@
-{% set version = "4.0.0a0" %}
-{% set sha256 = "fee3b6ec261393db5b4ec7c4fc96bf85c146cc6e5f38069c27d54fb7892bbb15" %}
+{% set version = "4.0.0a4" %}
+{% set sha256 = "a40f6b4a1131310a8ed8e03736af1fb66ea41aee6d930700ce7cbda07d3256f7" %}
 
 package:
   name: widgetsnbextension
@@ -18,9 +18,9 @@ requirements:
   host:
     - python >=3.5
     - pip
+    - jupyter-packaging =0.10
   run:
     - python >=3.5
-    - notebook >=4.4.1
 
 test:
   imports:
@@ -28,7 +28,7 @@ test:
 
 about:
   home: http://ipython.org
-  license: BSD 3-clause
+  license: BSD-3-Clause
   license_file: LICENSE
   license_family: BSD
   summary: Interactive Widgets for Jupyter
