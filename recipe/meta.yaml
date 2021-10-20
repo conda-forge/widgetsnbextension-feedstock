@@ -18,6 +18,7 @@ requirements:
   host:
     - python >=3.5
     - pip
+    - jupyter-packaging =0.10
   run:
     - python >=3.5
 
