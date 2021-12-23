@@ -1,5 +1,5 @@
-{% set version = "4.0.0a4" %}
-{% set sha256 = "a40f6b4a1131310a8ed8e03736af1fb66ea41aee6d930700ce7cbda07d3256f7" %}
+{% set version = "4.0.0b1" %}
+{% set sha256 = "6aab8443ea47029e70b322034eedbbf9cf526c47ace5a3a75b60fcc633309ffd" %}
 
 package:
   name: widgetsnbextension
@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.7
     - pip
     - jupyter-packaging =0.10
   run:
-    - python >=3.5
+    - python >=3.7
 
 test:
   imports:
