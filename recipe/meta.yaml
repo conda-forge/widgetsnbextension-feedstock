@@ -1,5 +1,5 @@
-{% set version = "4.0.0b1" %}
-{% set sha256 = "6aab8443ea47029e70b322034eedbbf9cf526c47ace5a3a75b60fcc633309ffd" %}
+{% set version = "4.0.0rc0" %}
+{% set sha256 = "059f10d6944c5f8accf11186e69202881a1528a2cf566deacb41b54d79a1f299" %}
 
 package:
   name: widgetsnbextension
@@ -12,13 +12,13 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - python >=3.7
     - pip
-    - jupyter-packaging =0.10
+    - jupyter-packaging
   run:
     - python >=3.7
 
