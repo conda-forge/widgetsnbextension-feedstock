@@ -9,7 +9,8 @@ source:
   sha256: e84a7a9fcb9baf3d57106e184a7389a8f8eb935bf741a5eb9d60aa18cc029a80
 
 build:
-  number: 0
+  noarch: python
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
@@ -19,10 +20,10 @@ requirements:
   host:
     - python
     - pip
-    - notebook >=4.4.1
+    - notebook >=5.3
   run:
     - python
-    - notebook >=4.4.1
+    - notebook >=5.3
 
 test:
   imports:
