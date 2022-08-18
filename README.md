@@ -13,7 +13,7 @@ Development: https://github.com/jupyter-widgets/ipywidgets/tree/master/widgetsnb
 
 Documentation: https://pypi.python.org/pypi/widgetsnbextension
 
-Interactive HTML widgets for Jupyter notebooks.
+Interactive Jupyter widgets for the classic Jupyter Notebook application.
 
 
 Current build status
