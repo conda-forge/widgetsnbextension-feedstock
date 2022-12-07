@@ -1,5 +1,4 @@
-{% set version = "4.0.3" %}
-{% set sha256 = "34824864c062b0b3030ad78210db5ae6a3960dfb61d5b27562d6631774de0286" %}
+{% set version = "4.0.4" %}
 
 package:
   name: widgetsnbextension
@@ -7,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/w/widgetsnbextension/widgetsnbextension-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 44c69f18237af0f610557d6c1c7ef76853f5856a0e604c0a517f2320566bb775
 
 build:
   noarch: python
@@ -23,8 +22,12 @@ requirements:
     - python >=3.7
 
 test:
+  requires:
+    - pip
   imports:
     - widgetsnbextension
+  commands:
+    - pip check
 
 about:
   home: http://ipython.org
@@ -47,3 +50,4 @@ extra:
     - willingc
     - pbugnion
     - ocefpaf
+    - bollwyvl
