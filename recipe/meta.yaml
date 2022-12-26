@@ -30,14 +30,13 @@ test:
     - pip check
 
 about:
-  home: http://ipython.org
+  home: http://jupyter.org
   license: BSD-3-Clause
   license_file: LICENSE
   license_family: BSD
-  summary: Interactive Widgets for Jupyter
-  description: |
-    Interactive Jupyter widgets for the classic Jupyter Notebook application.
-  doc_url: https://pypi.python.org/pypi/widgetsnbextension
+  summary: Jupyter interactive widgets for Jupyter Notebook
+  description: Interactive Jupyter widgets for the classic Jupyter Notebook application.
+  doc_url: https://ipywidgets.readthedocs.io
   dev_url: https://github.com/jupyter-widgets/ipywidgets/tree/master/python/widgetsnbextension
 
 extra:
