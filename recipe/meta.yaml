@@ -38,7 +38,7 @@ about:
   description: |
     Interactive Jupyter widgets for the classic Jupyter Notebook application.
   doc_url: https://pypi.python.org/pypi/widgetsnbextension
-  dev_url: https://github.com/jupyter-widgets/ipywidgets/tree/master/widgetsnbextension
+  dev_url: https://github.com/jupyter-widgets/ipywidgets/tree/master/python/widgetsnbextension
 
 extra:
   recipe-maintainers:
