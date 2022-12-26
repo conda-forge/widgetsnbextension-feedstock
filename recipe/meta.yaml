@@ -1,4 +1,4 @@
-{% set version = "4.0.4" %}
+{% set version = "4.0.5" %}
 
 package:
   name: widgetsnbextension
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/w/widgetsnbextension/widgetsnbextension-{{ version }}.tar.gz
-  sha256: 44c69f18237af0f610557d6c1c7ef76853f5856a0e604c0a517f2320566bb775
+  sha256: 003f716d930d385be3fd9de42dd9bf008e30053f73bddde235d14fbeaeff19af
 
 build:
   noarch: python
@@ -30,15 +30,14 @@ test:
     - pip check
 
 about:
-  home: http://ipython.org
+  home: http://jupyter.org
   license: BSD-3-Clause
   license_file: LICENSE
   license_family: BSD
-  summary: Interactive Widgets for Jupyter
-  description: |
-    Interactive Jupyter widgets for the classic Jupyter Notebook application.
-  doc_url: https://pypi.python.org/pypi/widgetsnbextension
-  dev_url: https://github.com/jupyter-widgets/ipywidgets/tree/master/widgetsnbextension
+  summary: Jupyter interactive widgets for Jupyter Notebook
+  description: Interactive Jupyter widgets for the classic Jupyter Notebook application.
+  doc_url: https://ipywidgets.readthedocs.io
+  dev_url: https://github.com/jupyter-widgets/ipywidgets/tree/master/python/widgetsnbextension
 
 extra:
   recipe-maintainers:
