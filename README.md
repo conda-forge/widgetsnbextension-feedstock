@@ -1,20 +1,19 @@
-About widgetsnbextension
-========================
-
-Home: http://ipython.org
-
-Package license: BSD-3-Clause
+About widgetsnbextension-feedstock
+==================================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/widgetsnbextension-feedstock/blob/main/LICENSE.txt)
 
-Summary: Interactive Widgets for Jupyter
+Home: http://jupyter.org
 
-Development: https://github.com/jupyter-widgets/ipywidgets/tree/master/widgetsnbextension
+Package license: BSD-3-Clause
 
-Documentation: https://pypi.python.org/pypi/widgetsnbextension
+Summary: Jupyter interactive widgets for Jupyter Notebook
+
+Development: https://github.com/jupyter-widgets/ipywidgets/tree/master/python/widgetsnbextension
+
+Documentation: https://ipywidgets.readthedocs.io
 
 Interactive Jupyter widgets for the classic Jupyter Notebook application.
-
 
 Current build status
 ====================
