@@ -1,4 +1,4 @@
-{% set version = "4.0.8" %}
+{% set version = "4.0.9" %}
 
 package:
   name: widgetsnbextension
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/w/widgetsnbextension/widgetsnbextension-{{ version }}.tar.gz
-  sha256: 9ec291ba87c2dfad42c3d5b6f68713fa18be1acd7476569516b2431682315c17
+  sha256: 3c1f5e46dc1166dfd40a42d685e6a51396fd34ff878742a3e47c6f0cc4a2a385
 
 build:
   noarch: python
