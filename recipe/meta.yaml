@@ -5,25 +5,26 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/w/widgetsnbextension/widgetsnbextension-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/w/widgetsnbextension/widgetsnbextension-{{ version }}.tar.gz
   sha256: ffcb67bc9febd10234a362795f643927f4e0c05d9342c727b65d2384f8feacb6
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - jupyter-packaging
   run:
-    - python >=3.7
+    - python >={{ python_min }}
 
 test:
   requires:
     - pip
+    - python {{ python_min }}
   imports:
     - widgetsnbextension
   commands:
